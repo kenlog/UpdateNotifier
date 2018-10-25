@@ -1,0 +1,14 @@
+.top-bar {
+    background: #28a745;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+.top-bar a {
+    color: #fff;
+}
+
+.top-bar a:hover {
+    color: #ddd;
+}
