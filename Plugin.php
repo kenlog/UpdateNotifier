@@ -22,7 +22,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return t('Update notifier.');
+        return t('What is Update Notifier? The Update Notifier is a utility that scans installed plugin and displays a list of updates.');
     }
 
     public function getPluginAuthor()
