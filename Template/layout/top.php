@@ -1,3 +1,4 @@
 <div class="top-bar">
-    <?= $this->Notifier->render() ?>
+    <b><?= $this->Notifier->renderUpdatekanboard() ?></b>
+    <?= $this->Notifier->renderUpdatePlugin() ?>
 </div>

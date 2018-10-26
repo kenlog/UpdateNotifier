@@ -8,7 +8,7 @@ use Kanboard\Controller\PluginController;
 
 class Notifier extends Base 
 {
-    public function render()
+    public function renderUpdatePlugin()
     {
         $installed_plugins = array();
 
@@ -38,5 +38,24 @@ class Notifier extends Base
                 return '<a href="?controller=PluginController&action=directory#'.$anchorLink.'">' . $message . '</a>';
             }
         } 
+    }
+
+    public function renderUpdatekanboard()
+    {
+        $xml = simplexml_load_file('https://github.com/kanboard/kanboard/releases.atom');
+
+        if ($xml) {
+            $i = 0;
+            $length = count($xml->entry);
+            foreach($xml->entry as $value) {
+                if ($i == 0) {
+                    if (APP_VERSION < substr($value->title, 9)) {
+                        return '<a href="https://github.com/kanboard/kanboard/releases" target="_blank">' . "New version: " . $value->title . '</a> | ';
+                    }
+
+                    $i++;
+                }
+            }
+        }
     }
 }
