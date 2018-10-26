@@ -17,7 +17,7 @@ class Plugin extends Base
   
     public function getPluginName()
     {
-        return 'UpdateNotifier';
+        return 'Update Notifier';
     }
 
     public function getPluginDescription()
