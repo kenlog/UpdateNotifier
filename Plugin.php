@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\UpdateNotifier;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Translator;
 
 class Plugin extends Base
 {
@@ -13,6 +14,11 @@ class Plugin extends Base
         $this->template->hook->attach('template:layout:top', 'UpdateNotifier:layout/top');
         $this->template->setTemplateOverride('plugin/directory', 'UpdateNotifier:plugin/directory');
         $this->hook->on("template:layout:css", array("template" => "plugins/UpdateNotifier/Assets/css/notifier.css"));
+    }
+
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
   
     public function getPluginName()

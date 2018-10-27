@@ -34,7 +34,7 @@ class Notifier extends Base
         foreach($installed_plugins as $key => $value) {
             if (isset($installed_plugins[$key]['version']) && isset($available_plugins[$key]['version'])) {
               if ($installed_plugins[$key]['version'] < $available_plugins[$key]['version']) {
-                $message = "New update: " . ucfirst($key) ." v". $available_plugins[$key]['version'];
+                $message = t('New update:') . " " . ucfirst($key) ." v". $available_plugins[$key]['version'];
                 $anchorLink = ucfirst($key); 
                 return '<a href="?controller=PluginController&action=directory#'.$anchorLink.'">' . $message . '</a>';
               }
@@ -52,7 +52,7 @@ class Notifier extends Base
             foreach($xml->entry as $value) {
                 if ($i == 0) {
                     if (APP_VERSION < substr($value->title, 9)) {
-                        return '<a href="https://github.com/kanboard/kanboard/releases" target="_blank">' . "New version: " . $value->title . '</a> ';
+                        return '<a href="https://github.com/kanboard/kanboard/releases" target="_blank">' . t('New version:') . " " . $value->title . '</a> ';
                     }
 
                     $i++;
