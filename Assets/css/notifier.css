@@ -13,6 +13,11 @@
     color: #ddd;
 }
 
-#inputNamePlugin {
-    margin-bottom: 20px
+.filter-plugin { 
+    margin-top: 20px;
+}
+
+.filter-plugin p{
+    margin-bottom: 5px;
+    font-weight: bold;
 }

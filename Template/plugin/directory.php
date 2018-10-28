@@ -1,9 +1,10 @@
 <div class="page-header">
     <h2><?= t('Plugin Directory') ?></h2>
+    <div class="filter-plugin">   
+        <p><?= t('Filter by name or content') ?></p>
+        <input id="inputNamePlugin" type="text" placeholder="<?= t('Search...') ?>" autofocus>
+    </div> 
 </div>
-
-<h2><?= t('Filter by name or content') ?></h2>
-<input id="inputNamePlugin" type="text" placeholder="<?= t('Search...') ?>" autofocus>
 
 <?php if (! $is_configured): ?>
 <p class="alert alert-error">
