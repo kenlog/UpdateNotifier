@@ -3,7 +3,7 @@
 </div>
 
 <h2><?= t('Filter by name or content') ?></h2>
-<input id="inputNamePlugin" type="text" placeholder="Search..">
+<input id="inputNamePlugin" type="text" placeholder="<?= t('Search...') ?>" autofocus>
 
 <?php if (! $is_configured): ?>
 <p class="alert alert-error">
