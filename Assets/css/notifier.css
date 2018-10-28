@@ -12,3 +12,7 @@
 .top-bar a:hover {
     color: #ddd;
 }
+
+#inputNamePlugin {
+    margin-bottom: 20px
+}

@@ -2,6 +2,9 @@
     <h2><?= t('Plugin Directory') ?></h2>
 </div>
 
+<h2>Filter by name or content</h2>
+<input id="inputNamePlugin" type="text" placeholder="Search..">
+
 <?php if (! $is_configured): ?>
 <p class="alert alert-error">
     <?= t('Your Kanboard instance is not configured to install plugins from the user interface.') ?>
