@@ -14,6 +14,7 @@
 <?php if (empty($available_plugins)): ?>
     <p class="alert"><?= t('There is no plugin available.') ?></p>
 <?php else: ?>
+    <?php uksort($available_plugins, 'strcasecmp'); ?>
     <?php foreach ($available_plugins as $plugin): ?>
     <table>
         <tr>
