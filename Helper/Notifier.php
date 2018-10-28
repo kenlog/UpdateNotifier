@@ -52,7 +52,7 @@ class Notifier extends Base
             foreach($xml->entry as $value) {
                 if ($i == 0) {
                     if (APP_VERSION < substr($value->title, 9)) {
-                        return '<a href="https://github.com/kanboard/kanboard/releases" target="_blank">' . t('New version:') . " " . $value->title . '</a> ';
+                        return '<a href="https://github.com/kanboard/kanboard/releases/latest" target="_blank">' . t('New version:') . " " . $value->title . '</a> ';
                     }
 
                     $i++;
