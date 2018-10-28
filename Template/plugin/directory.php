@@ -15,7 +15,7 @@
     <p class="alert"><?= t('There is no plugin available.') ?></p>
 <?php else: ?>
     <?php foreach ($available_plugins as $plugin): ?>
-    <table>
+    <table id="plugins">
         <tr>
             <th colspan="3">
                 <?php $id = explode(' ',trim($plugin['title'])); ?>
