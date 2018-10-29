@@ -6,7 +6,7 @@
 What is Update Notifier? The Update Notifier is a utility that scans installed plugin and displays a list of updates.
 
 # Screenshot
-![notifier](https://user-images.githubusercontent.com/11728231/47621537-9ec19a00-daf9-11e8-9d37-704b0119e357.jpg)
+![updatenotifier](https://user-images.githubusercontent.com/11728231/47646555-8f336700-db74-11e8-958a-4c2d61865159.jpg)
 
 Author
 ------------
