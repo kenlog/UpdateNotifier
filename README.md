@@ -29,12 +29,14 @@ You have the choice between 3 methods:
 
 Note: Plugin folder is case-sensitive.
 
-Contributing or modifying the plugin
+### :star: If you like , do not forget to give me a star on GitHub! 
+
+:construction_worker: Any contribution will be highly appreciated
 ------------
 Clone the repository: 
 ```console 
 git clone https://github.com/kenlog/UpdateNotifier.git
 ```
-Reporting Issues
+:bug: Reporting Issues
 ------------
 Please [create an issue](https://github.com/kenlog/UpdateNotifier/issues) for any bugs you've found.
