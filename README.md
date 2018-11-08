@@ -5,8 +5,8 @@
 # Update notifier for kanboard
 What is Update Notifier? The Update Notifier is a utility that scans installed plugin and displays a list of updates.
 
-# Screenshot
-![updatenotifier](https://user-images.githubusercontent.com/11728231/47646555-8f336700-db74-11e8-958a-4c2d61865159.jpg)
+# Preview
+![updatenotifier-preview](https://user-images.githubusercontent.com/11728231/48214182-b6154880-e37f-11e8-810f-09097144b2fa.gif)
 
 Author
 ------------
