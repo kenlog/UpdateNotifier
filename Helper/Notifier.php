@@ -50,7 +50,7 @@ class Notifier extends Base
             return false;
         }
         else {
-            $xml = simplexml_load_file('https://github.com/kanboard/kanboard/releases.atom');
+            $xml = simplexml_load_file($file);
             $i = 0;
             $length = count($xml->entry);
             foreach($xml->entry as $value) {
