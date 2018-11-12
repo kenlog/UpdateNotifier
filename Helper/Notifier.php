@@ -44,9 +44,13 @@ class Notifier extends Base
 
     public function renderUpdatekanboard()
     {
-        $xml = simplexml_load_file('https://github.com/kanboard/kanboard/releases.atom');
-
-        if ($xml) {
+        $file = 'https://github.com/kanboard/kanboard/releases.atom';
+        $file_headers = @get_headers($file);
+        if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
+            return false;
+        }
+        else {
+            $xml = simplexml_load_file('https://github.com/kanboard/kanboard/releases.atom');
             $i = 0;
             $length = count($xml->entry);
             foreach($xml->entry as $value) {
