@@ -13,7 +13,8 @@ class Notifier extends Base
 
     public function renderUpdatePlugin()
     {
-        if ($this->request->getQueryString() == $this->dashboard || $this->request->getQueryString() == $this->pluginDirectory) {
+        
+        if (($this->request->getQueryString() == $this->dashboard || $this->request->getQueryString() == $this-pluginDirectory) || (strpos($this->request->getUri(), 'directory') !== false || strpos($this->request->getUri(), 'dashboard') !== false)) {
 
             $installed_plugins = array();
 
@@ -52,7 +53,7 @@ class Notifier extends Base
 
     public function renderUpdatekanboard()
     {
-        if ($this->request->getQueryString() == $this->dashboard || $this->request->getQueryString() == $this->pluginDirectory) {
+        if (($this->request->getQueryString() == $this->dashboard || $this->request->getQueryString() == $this-pluginDirectory) || (strpos($this->request->getUri(), 'directory') !== false || strpos($this->request->getUri(), 'dashboard') !== false)) {
             $file = 'https://github.com/kanboard/kanboard/releases.atom';
             $file_headers = @get_headers($file);
             if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
