@@ -8,9 +8,28 @@ use Kanboard\Controller\PluginController;
 
 class Notifier extends Base 
 {
+    /**
+     * Returns URI Dashboard Controller
+     *
+     * @access private
+     * @var string
+     */
     private $dashboard = 'controller=DashboardController&action=show';
+    
+    /**
+     * Returns URI Plugin Controller
+     *
+     * @access private
+     * @var string
+     */
     private $pluginDirectory = 'controller=PluginController&action=directory';
 
+    /**
+     * Show the notification for the plugin update
+     *
+     * @access public
+     * @return string
+     */
     public function renderUpdatePlugin()
     {
         
@@ -51,6 +70,12 @@ class Notifier extends Base
          
     }
 
+    /**
+     * Show notification for kanboard update
+     *
+     * @access public
+     * @return string
+     */
     public function renderUpdatekanboard()
     {
         if (($this->request->getQueryString() == $this->dashboard || $this->request->getQueryString() == $this->pluginDirectory) || (strpos($this->request->getUri(), 'directory') !== false || strpos($this->request->getUri(), 'dashboard') !== false)) {
