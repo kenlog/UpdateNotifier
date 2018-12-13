@@ -78,6 +78,9 @@ class Notifier extends Base
      */
     public function renderUpdatekanboard()
     {
+        $applications_version = APP_VERSION;
+        if (strpos(APP_VERSION, 'master') !== false && file_exists('ChangeLog')) { $applications_version = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
+
         if (($this->request->getQueryString() == $this->dashboard || $this->request->getQueryString() == $this->pluginDirectory) || (strpos($this->request->getUri(), 'directory') !== false || strpos($this->request->getUri(), 'dashboard') !== false)) {
             $file = 'https://github.com/kanboard/kanboard/releases.atom';
             $file_headers = @get_headers($file);
@@ -90,7 +93,7 @@ class Notifier extends Base
                 $length = count($xml->entry);
                 foreach($xml->entry as $value) {
                     if ($i == 0) {
-                        if (filter_var(APP_VERSION, FILTER_SANITIZE_NUMBER_INT) < filter_var($value->title, FILTER_SANITIZE_NUMBER_INT)) {
+                        if (filter_var($applications_version, FILTER_SANITIZE_NUMBER_INT) < filter_var($value->title, FILTER_SANITIZE_NUMBER_INT)) {
                             return '<a href="https://github.com/kanboard/kanboard/releases/latest" target="_blank">' . t('New version:') . " " . $value->title . '</a> ';
                         }
 
