@@ -93,8 +93,8 @@ class Notifier extends Base
                 $length = count($xml->entry);
                 foreach($xml->entry as $value) {
                     if ($i == 0) {
-                        if (version_compare($applications_version, trim($value->title, 'Kanboard ')) < 0) {
-                            return '<a href="https://github.com/kanboard/kanboard/releases/latest" target="_blank">' . t('New version:') . " " . $value->title . '</a> ';
+                        if (version_compare($applications_version, trim(preg_replace('/[A-Za-z]/', '', $value->title), ' ')) < 0) {
+                            return '<a href="https://github.com/kanboard/kanboard/releases/latest" target="_blank">' . t('New version: Kanboard v') . " " . trim(preg_replace('/[A-Za-z]/', '', $value->title), ' ') . '</a> ';
                         }
 
                         $i++;
