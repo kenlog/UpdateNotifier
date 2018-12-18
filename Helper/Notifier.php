@@ -59,7 +59,7 @@ class Notifier extends Base
             
             foreach($installed_plugins as $key => $value) {
                 if (isset($installed_plugins[$key]['version']) && isset($available_plugins[$key]['version'])) {
-                    if ($installed_plugins[$key]['version'] < $available_plugins[$key]['version']) {
+                    if (version_compare($installed_plugins[$key]['version'], $available_plugins[$key]['version']) < 0) {
                         $message = t('New update:') . " " . ucfirst($key) ." v". $available_plugins[$key]['version'];
                         $anchorLink = ucfirst($key); 
                         return '<a href="?controller=PluginController&action=directory#'.$anchorLink.'">' . $message . '</a>';
