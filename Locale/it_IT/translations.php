@@ -2,7 +2,7 @@
 
 return [
     'New update:' => 'Nuovo aggiornamento:',
-    'New version:' => 'Nuova versione:',
+    'New version: Kanboard v' => 'Nuova versione: Kanboard v',
     'Filter by name or content' => 'Filtra per nome o contenuto',
     'Search...' => 'Ricerca...'
 ];
