@@ -2,5 +2,5 @@
 
 return [
     'New update:' => 'Nouvelle mise à jour:',
-    'New version:' => 'Nouvelle version:'
+    'New version: Kanboard v' => 'Nouvelle version: Kanboard v'
 ];
