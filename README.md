@@ -1,3 +1,4 @@
+[![Latest release](https://img.shields.io/github/release/kenlog/UpdateNotifier.svg)](https://github.com/kenlog/UpdateNotifier/releases)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/kenlog/UpdateNotifier/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kenlog/UpdateNotifier/graphs/contributors)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]()
