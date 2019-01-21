@@ -2,6 +2,7 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/kenlog/UpdateNotifier/blob/master/LICENSE)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/kenlog/UpdateNotifier/graphs/contributors)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]()
+[![Downloads](https://img.shields.io/github/downloads/kenlog/UpdateNotifier/total.svg)](https://github.com/kenlog/UpdateNotifier/releases)
 
 # Update notifier for kanboard
 What is Update Notifier? The Update Notifier is a utility that scans installed plugin and displays a list of updates.
