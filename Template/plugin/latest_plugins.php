@@ -9,7 +9,7 @@
 <?php endif ?>
 
 <?php if (empty($available_plugins)): ?>
-    <p class="alert"><?= t('There is no plugin available.') ?></p>
+    <p class="alert"><?= t('There are no new plugins available at this moment.') ?></p>
 <?php else: ?>
     <?php foreach ($available_plugins as $plugin): ?>
     <table>
