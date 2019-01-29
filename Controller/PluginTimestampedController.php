@@ -31,6 +31,7 @@ class PluginTimestampedController extends BaseController
         }
         
         $this->response->html($this->helper->layout->plugin('updatenotifier:plugin/latest_plugins', array(
+           'installed_plugins' => $installedPlugins,
             'available_plugins' => $availablePlugins,
             'title' => t('Plugin Directory'),
             'is_configured' => Installer::isConfigured(),
