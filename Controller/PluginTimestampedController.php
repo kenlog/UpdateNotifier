@@ -21,7 +21,7 @@ class PluginTimestampedController extends BaseController
             $installedPlugins[$plugin->getPluginName()] = $plugin->getPluginVersion();
         }
         
-        if ($set_plugins = 1) {
+        if ($set_plugins == 1) {
             foreach ($availablePlugins as $name => $value) {
                 $this->pluginTimestampedModel->save($name);
             }
