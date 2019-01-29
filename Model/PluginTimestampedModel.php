@@ -53,7 +53,7 @@ class PluginTimestampedModel extends Base
         return ! in_array(false, $results, true);
     }
     
-    public function SaveWithoutTimestamp($name)
+    public function saveWithoutTimestamp($name)
     {
         $results = array();
 
