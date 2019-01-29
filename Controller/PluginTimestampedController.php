@@ -29,7 +29,7 @@ class PluginTimestampedController extends BaseController
             if (!in_array($name, $onlyTenLatestPlugins, true)) { unset($availablePlugins[$name]); }
         }
         
-        $this->response->html($this->helper->layout->plugin('updatenotifier:plugin/latest_plugins', array(
+        $this->response->html($this->helper->layout->plugin('UpdateNotifier:plugin/latest_plugins', array(
            'installed_plugins' => $installedPlugins,
             'available_plugins' => $availablePlugins,
             'title' => t('Plugin Directory'),
