@@ -23,7 +23,7 @@ class PluginTimestampedModel extends Base
             ->table(self::TABLE)
             ->desc('date_creation')
             ->limit(10)
-            ->findAll();
+            ->findAllByColumn('name');
     }
 
     public function exists($name)
