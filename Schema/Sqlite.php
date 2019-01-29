@@ -11,7 +11,7 @@ function version_1(PDO $pdo)
     $pdo->exec("
         CREATE TABLE plugin_dates (
             name TEXT NOT NULL PRIMARY KEY,
-            date_creation INTEGER NOT NULL
+            date_creation INTEGER NOT NULL DEFAULT 0
         )
     ");
 }
