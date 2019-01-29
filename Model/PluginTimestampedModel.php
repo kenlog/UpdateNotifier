@@ -54,18 +54,13 @@ class PluginTimestampedModel extends Base
     }
     
     public function saveWithoutTimestamp($name)
-    {
-        $results = array();
-
-        $this->db->startTransaction();
-        
-        $results[] = $this->db->table(self::TABLE)->save(array(
-            'name' => $name,
-            'date_creation' => 0,
-        ));
-
-        $this->db->closeTransaction();
-        return ! in_array(false, $results, true);
+    {        
+        return $this->db
+                    ->table(self::TABLE)
+                    ->save(array(
+                        'name' => $name,
+                        'date_creation' => 0,
+                    ));
     }
     
 }
