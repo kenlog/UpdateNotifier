@@ -13,6 +13,7 @@ class Plugin extends Base
         $this->helper->register('Notifier', 'Kanboard\Plugin\UpdateNotifier\Helper\Notifier');
         $this->template->hook->attach('template:layout:top', 'UpdateNotifier:layout/top');
         $this->template->setTemplateOverride('plugin/directory', 'UpdateNotifier:plugin/directory');
+        $this->template->setTemplateOverride('plugin/sidebar', 'UpdateNotifier:plugin/sidebar');
         $this->hook->on("template:layout:css", array("template" => "plugins/UpdateNotifier/Assets/css/notifier.css"));
         $this->hook->on('template:layout:js', array('template' => 'plugins/UpdateNotifier/Assets/js/notifier.js'));
     }
