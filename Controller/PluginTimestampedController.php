@@ -27,7 +27,7 @@ class PluginTimestampedController extends BaseController
         $onlyTenLatestPlugins = $this->pluginTimestampedModel->getTen();
         
         foreach ($availablePlugins as $name => $value) {
-            if (!in_array($name, $onlyTenLatestPlugins) { unset($availablePlugins[$name]); }
+            if (!in_array($name, $onlyTenLatestPlugins)) { unset($availablePlugins[$name]); }
         }
         
         $this->response->html($this->helper->layout->plugin('updatenotifier:plugin/latest_plugins', array(
