@@ -22,6 +22,7 @@ class PluginTimestampedModel extends Base
         return $this->db
             ->table(self::TABLE)
             ->desc('date_creation')
+            ->neq('date_creation', 0)
             ->limit(10)
             ->findAllByColumn('name');
     }
@@ -51,5 +52,20 @@ class PluginTimestampedModel extends Base
         $this->db->closeTransaction();
         return ! in_array(false, $results, true);
     }
+    
+    public function SaveWithoutTimestamp($name)
+    {
+        $results = array();
 
+        $this->db->startTransaction();
+        
+        $results[] = $this->db->table(self::TABLE)->save(array(
+            'name' => $name,
+            'date_creation' => 0,
+        ));
+
+        $this->db->closeTransaction();
+        return ! in_array(false, $results, true);
+    }
+    
 }
