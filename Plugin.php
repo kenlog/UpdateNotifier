@@ -21,6 +21,15 @@ class Plugin extends Base
     {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
+    
+    public function getClasses()
+    {
+        return [
+            'Plugin\UpdateNotifier\Model' => [
+                'MultiselectMemberModel',
+            ],
+        ];
+    }
   
     public function getPluginName()
     {
@@ -39,7 +48,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '1.3.6';  
+        return '1.4.0';  
     }
 
     public function getCompatibleVersion()
