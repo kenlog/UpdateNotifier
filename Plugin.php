@@ -2,6 +2,7 @@
 
 namespace Kanboard\Plugin\UpdateNotifier;
 
+use Kanboard\Plugin\UpdateNotifier\Model\PluginTimestampedModel;
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
 
@@ -27,7 +28,7 @@ class Plugin extends Base
     {
         return [
             'Plugin\UpdateNotifier\Model' => [
-                'MultiselectMemberModel',
+                'PluginTimestampedModel',
             ],
         ];
     }
