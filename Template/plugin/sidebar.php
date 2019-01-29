@@ -7,8 +7,8 @@
         <li <?= $this->app->checkMenuSelection('PluginController', 'directory') ?>>
             <?= $this->url->link(t('Plugin Directory'), 'PluginController', 'directory') ?>
         </li>
-        <li <?= $this->app->checkMenuSelection('PluginTimestampedController', 'show', ['plugin' => 'updatenotifiter']) ?>>
-            <?= $this->url->link(t('Latest Plugins'), 'PluginTimestampedController', 'show', ['plugin' => 'updatenotifiter']) ?>
+        <li <?= $this->app->checkMenuSelection('PluginTimestampedController', 'show', ['plugin' => 'updatenotifier']) ?>>
+            <?= $this->url->link(t('Latest Plugins'), 'PluginTimestampedController', 'show', ['plugin' => 'updatenotifier']) ?>
         </li>
     </ul>
 </div>
