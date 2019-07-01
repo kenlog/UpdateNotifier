@@ -78,7 +78,7 @@ class Notifier extends Base
      */
     public function renderUpdatekanboard()
     {
-        $applications_version = APP_VERSION;
+        $applications_version = str_replace('v', '', APP_VERSION);
         if (strpos(APP_VERSION, 'master') !== false && file_exists('ChangeLog')) { $applications_version = trim(file_get_contents('ChangeLog', false, null, 8, 6), ' '); }
 
         if (($this->request->getQueryString() == $this->dashboard || $this->request->getQueryString() == $this->pluginDirectory) || (strpos($this->request->getUri(), 'directory') !== false || strpos($this->request->getUri(), 'dashboard') !== false)) {
