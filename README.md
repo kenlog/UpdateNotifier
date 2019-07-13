@@ -11,7 +11,9 @@
 [![Downloads](https://img.shields.io/github/downloads/kenlog/UpdateNotifier/total.svg)](https://github.com/kenlog/UpdateNotifier/releases)
 
 # Update notifier for kanboard
-<noscript><a href="https://liberapay.com/kenlog/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>  
+<noscript><a href="https://liberapay.com/kenlog/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript> 
+<a href="https://paypal.me/kenlog"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /></a>
+
 What is Update Notifier? The Update Notifier is a utility that scans installed plugin and displays a list of updates.
 * Push notifications only visible to System Administrators.
 
