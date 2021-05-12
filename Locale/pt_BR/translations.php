@@ -2,7 +2,7 @@
 
 return [
     'New update:' => 'Nova atualização:',
-    'New version: Kanboard v' => 'Nova verão: Kanboard v',
+    'New version: Kanboard v' => 'Nova versão: Kanboard v',
     'Filter by name or content' => 'Filtra pelo nome do conteúdo',
     'Search...' => 'Pesquisar...',
     'Latest Plugins' => 'Últimas versões',
